@@ -1,0 +1,31 @@
+// Colors
+$white: #fff;
+$black: #020000;
+$accent: #92807d;
+$accent-dark: #6f605d;
+$bg-color: #ebe8eb;
+$light-grey: #e9e8e8;
+$logo-bg: #f7f6f7;
+$top-border: #88918c;
+
+// Typography
+$main-font: #{'Akrobat, Helvetica, sans-serif'};
+$content-font: #{'Open Sans, Helvetica, Arial, sans-serif'};
+
+$base-font-size: 14px;
+$base-line-height: 1.5;
+
+// Transition
+$duration: 400ms;
+$timing-function: ease-in-out;
+
+$hamburger-padding-x                       : 0;
+$hamburger-padding-y                       : 0;
+$hamburger-layer-width                     : 15px;
+$hamburger-layer-height                    : 1px;
+$hamburger-layer-spacing                   : 4px;
+$hamburger-layer-color                     : $black;
+$hamburger-layer-border-radius             : 0;
+$hamburger-hover-opacity                   : 1;
+$hamburger-hover-transition-duration       : 0.25s;
+$hamburger-hover-transition-timing-function: $timing-function;

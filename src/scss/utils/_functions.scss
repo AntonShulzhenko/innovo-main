@@ -1,0 +1,14 @@
+// Set Color
+// @function set-color($key: 'primary') {
+//   @return map-get($innovo-colors, $key);
+// }
+
+// Set Font Size
+@function type-scale($level) {
+  @return map-get($type-scale, $level);
+}
+
+// Set Line Height
+@function line-height($level) {
+  @return map-get($line-height, $level);
+}

@@ -1,0 +1,36 @@
+.go-top {
+  position: fixed;
+  right: 32px;
+  bottom: 30px;
+  background-color: $accent;
+  box-shadow: 0 5px 10px rgba($black, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 40px;
+  font-size: 24px;
+  color: $white;
+  z-index: 30;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all $duration $timing-function;
+  &.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  &:hover {
+    text-decoration: none;
+    color: $white;
+    background-color: darken($accent, 10%);
+  }
+  &:focus,
+  &:active {
+    color: $white;
+  }
+  @include for-phone-only {
+    right: 0;
+    bottom: 0;
+  }
+}

@@ -1,0 +1,6 @@
+//=require 'jquery/dist/jquery.min.js'
+//=require 'bootstrap-sass/assets/javascripts/bootstrap.min.js'
+//=require 'handlebars/dist/handlebars.runtime.js'
+//=require 'gsap/src/minified/TweenMax.min.js'
+//=require 'libs/owl.carousel.min.js'
+//=require 'libs/pace.min.js'

@@ -1,0 +1,57 @@
+.contact-section {
+  width: 100%;
+  height: 420px;
+  padding: 90px 0 0 110px;
+  margin-top: 10px;
+  @include for-phone-only {
+    padding: 15px 0 0 10px;
+  }
+  @include for-tablet-portrait-up {
+    padding: 60px 0 0 60px;
+  }
+  @include for-tablet-landscape-up {
+    padding: 60px 0 0 60px;
+    height: 600px;
+  }
+  @include for-desktop-up {
+    height: 700px;
+  }
+  @include for-big-desktop-up {
+    height: 880px;
+  }
+  &__heading {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 20px;
+    @include for-phone-only {
+      margin: 0 0 20px;
+      font-size: 26px;
+    }
+  }
+  &__link {
+    display: block;
+    font-family: $main-font;
+    font-size: 20px;
+    line-height: 36px;
+    color: $black;
+    position: relative;
+    z-index: 3;
+    @include for-phone-only {
+      line-height: 25px;
+      font-size: 16px;
+    }
+    &:hover {
+      text-decoration: underline;
+      color: $black;
+    }
+    &:focus {
+      text-decoration: none;
+      color: $black;
+    }
+  }
+  #map {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}

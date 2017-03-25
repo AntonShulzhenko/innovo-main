@@ -1,0 +1,222 @@
+.about {
+  background-color: $white;
+  padding: 60px 15px 0;
+  @include for-big-desktop-up {
+    padding: 170px 120px 200px;
+  }
+  @include for-desktop-only {
+    padding: 100px 80px 130px;
+  }
+  @include for-tablet-landscape-only {
+    padding: 80px;
+  }
+  @include for-tablet-portait-only {
+    padding: 80px 30px;
+  }
+  &.decor {
+    &::before {
+      top: 195px;
+      @include for-tablet-portait-only {
+        top: 65px;
+      }
+      @include for-phone-only {
+        top: 45px;
+      }
+    }
+    &::after {
+      top: 190px;
+      @include for-tablet-portait-only {
+        top: 60px;
+      }
+      @include for-phone-only {
+        top: 40px;
+      }
+    }
+  }
+  &__h2 {
+    margin-top: 0;
+    margin-bottom: 70px;
+    @media (max-width: 1440px) {
+      margin-bottom: 40px;
+    }
+    @include for-tablet-portait-only {
+      margin-bottom: 30px;
+    }
+    @include for-phone-only {
+      margin-bottom: 20px;
+    }
+  }
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    @media (max-width: 1440px) {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+  }
+  &__item {
+    width: 26%;
+    margin-right: 6%;
+    &:first-child {
+      @media (max-width: 1440px) {
+        width: 100%;
+        max-width: 850px;
+        margin-right: 0;
+        margin-bottom: 40px;
+      }
+      @media (max-width: 1199px) {
+        max-width: 100%;
+      }
+    }
+    &:not(:first-child) {
+      @media (max-width: 1199px) {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 40px;
+      }
+    }
+    &_carousel {
+      width: 42%;
+      @media (max-width: 1440px) {
+        margin-right: 5%;
+        width: 60%;
+      }
+      .owl-carousel {
+        @media (max-width: 1199px) {
+          max-width: 580px;
+        }
+        img {
+          width: auto;
+        }
+      }
+      .owl-item {
+        &::before {
+          content: "";
+          display: block;
+          width: 100%;
+          height: 100%;
+          background-color: rgba($accent, 0.28);
+          position: absolute;
+          left: 0;
+          top: 0;
+          z-index: 2;
+        }
+      }
+      .owl-nav {
+        width: 164px;
+        height: 48px;
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        @include for-phone-only {
+          width: 120px;
+          height: 30px;
+        }
+        &::before {
+          content: "";
+          display: block;
+          width: 2px;
+          height: 100%;
+          background-color: rgba($light-grey, 0.14);
+          position: absolute;
+          left: 50%;
+          margin-left: -1px;
+          top: 0;
+          z-index: 2;
+        }
+        .owl-prev,
+        .owl-next {
+          width: 50%;
+          background-color: $accent;
+          font-size: 48px;
+          font-weight: 300;
+          color: $white;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          transition: all $duration $timing-function;
+          @include for-phone-only {
+            font-size: 36px;
+            transition-duration: 100ms;
+          }
+          &:hover {
+            background-color: darken($accent, 10%);
+            @include for-phone-only {
+              background-color: $accent;
+            }
+          }
+          &:active {
+            background-color: darken($accent, 10%);
+          }
+        }
+      }
+      .title {
+        max-width: 320px;
+        position: absolute;
+        right: 36px;
+        top: 44px;
+        font-size: 14px;
+        font-weight: 900;
+        line-height: 28px;
+        color: $white;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        text-align: right;
+        z-index: 2;
+        @include for-phone-only {
+          right: 20px;
+          top: 20px;
+          max-width: 100%;
+          line-height: 20px;
+        }
+      }
+    }
+    &_benefits {
+      width: 20%;
+      @media (max-width: 1440px) {
+        width: 35%;
+      }
+      .benefits {
+        &__item {
+          @media (max-width: 1440px) {
+            margin-bottom: 40px;
+          }
+        }
+        &__h3 {
+          @media (max-width: 1199px) {
+            margin-bottom: 10px;
+          }
+          @include for-phone-only {
+            font-size: 36px;
+            line-height: 40px;
+          }
+        }
+        &__p {
+          @media (max-width: 1440px) {
+            max-width: 320px;
+          }
+          @media (max-width: 1199px) {
+            max-width: 100%;
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__p {
+    font-size: 16px;
+    line-height: 30px;
+    margin-bottom: 30px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

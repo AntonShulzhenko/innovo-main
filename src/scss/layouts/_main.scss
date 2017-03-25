@@ -1,0 +1,11 @@
+.main {
+  width: 100%;
+  position: relative;
+  padding: 16px 16px 0 120px;
+  @media (max-width: 899px) {
+    padding-left: 16px;
+  }
+  @media (max-width: 599px) {
+    padding: 6px;
+  }
+}

@@ -1,0 +1,44 @@
+.footer {
+  position: relative;
+  width: 100%;
+  height: 130px;
+  padding: 54px 0 0 14.5%;
+  background-color: $bg-color;
+  @include for-phone-only {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: auto;
+  }
+  &__copy {
+    font-family: $main-font;
+    font-size: 16px;
+    font-weight: 700;
+    color: $black;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 0;
+    @include for-phone-only {
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+  }
+  &.decor {
+    &::before {
+      width: 11%;
+      top: 65px;
+      @include for-phone-only {
+        top: 30px;
+        width: 8%;
+      }
+    }
+    &::after {
+      left: 11%;
+      top: 60px;
+      box-shadow: inset 0 0 0 1px rgba($accent-dark, 0.2), inset 0 0 0 3px $bg-color;
+      @include for-phone-only {
+        top: 25px;
+        left: 8%;
+      }
+    }
+  }
+}

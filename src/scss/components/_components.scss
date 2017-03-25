@@ -1,0 +1,269 @@
+// Contacts
+.contacts {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  margin-bottom: 0;
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 40px;
+    &_menu {
+      display: none;
+      @media (max-width: 899px) {
+        display: block;
+      }
+    }
+  }
+  &__text {
+    font-family: $main-font;
+    font-size: 30px;
+    line-height: 1;
+    color: $white;
+    letter-spacing: 3px;
+  }
+  &__pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: $white;
+    font-family: "Ionicons";
+    font-size: 24px;
+    text-align: center;
+    line-height: 40px;
+    color: $black;
+    margin-right: 14px;
+  }
+}
+
+// Decor
+.decor {
+  position: relative;
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    z-index: 2;
+  }
+  &::before {
+    width: 40px;
+    height: 1px;
+    background-color: rgba($accent-dark, 0.2);
+    position: absolute;
+    left: 0;
+    top: 100px;
+  }
+  &::after {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background-color: rgba($accent-dark, 0.2);
+    position: absolute;
+    left: 40px;
+    top: 95px;
+    box-shadow: inset 0 0 0 1px rgba($accent-dark, 0.2), inset 0 0 0 3px $white;
+  }
+}
+
+// Benefits
+.benefits {
+  &__item {
+    margin-bottom: 40px;
+  }
+  &__h3 {
+    font-family: $main-font;
+    font-size: 42px;
+    font-weight: 100;
+    line-height: 48px;
+    color: $black;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  &__p {
+    max-width: 280px;
+    font-size: 12px;
+    line-height: 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+}
+
+// Box
+.box {
+  box-shadow: 0 2px 32px rgba($black, 0.14);
+  border-bottom: 9px solid $accent;
+  background: {
+    color: $white;
+    image: url(../img/top-about-bg.png);
+    repeat: no-repeat;
+    position: center;
+    size: cover;
+  }
+}
+
+// Price table
+.price-table {
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    position: relative;
+    width: 100%;
+    margin-bottom: 120px;
+    @media (max-width: 1440px) {
+      margin-bottom: 80px;
+    }
+    @include for-phone-only {
+      flex-wrap: wrap;
+      align-items: flex-start;
+      margin-bottom: 30px;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__left {
+    width: 27%;
+    @media (min-width: 600px) and (max-width: 1199px) {
+      width: 30%;
+    }
+    @include for-phone-only {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+  &__right {
+    width: 64%;
+    padding-top: 70px;
+    border-top: 3px solid $black;
+    @media (max-width: 1440px) {
+      padding-top: 40px;
+    }
+    @media (max-width: 1199px) {
+      padding-top: 20px;
+      border-width: 2px;
+    }
+    @include for-phone-only {
+      width: 100%;
+      margin-bottom: 0;
+    }
+  }
+  &__heading {
+    font-size: 40px;
+    font-weight: 100;
+    line-height: 64px;
+    margin: 0;
+    text-align: right;
+    @media (max-width: 1440px) {
+      font-size: 30px;
+      line-height: 50px;
+    }
+    @include for-tablet-landscape-only {
+      font-size: 24px;
+      line-height: 42px;
+    }
+    @include for-tablet-portait-only {
+      font-size: 20px;
+      line-height: 40px;
+      letter-spacing: 2px;
+    }
+    @include for-phone-only {
+      font-size: 28px;
+      line-height: 40px;
+      letter-spacing: 1px;
+      text-align: left;
+    }
+  }
+  &__service {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    margin-bottom: 20px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    p {
+      font-family: $main-font;
+      font-size: 28px;
+      font-weight: 600;
+      line-height: 36px;
+      text-transform: uppercase;
+      margin-bottom: 0;
+      @media (max-width: 1440px) {
+        font-size: 24px;
+        line-height: 30px;
+      }
+      @include for-tablet-landscape-only {
+        font-size: 20px;
+        line-height: 28px;
+      }
+      @include for-tablet-portait-only {
+        font-size: 18px;
+        line-height: 26px;
+      }
+      @include for-phone-only {
+        font-size: 20px;
+        line-height: 30px;
+      }
+    }
+    small {
+      font-size: 18px;
+      text-transform: none;
+      @media (max-width: 1440px) {
+        font-size: 16px;
+      }
+      @include for-tablet-landscape-only {
+        font-size: 14px;
+      }
+      @include for-tablet-portait-only {
+        font-size: 12px;
+      }
+      @include for-phone-only {
+        font-size: 12px;
+      }
+    }
+    .name {
+      width: 78%;
+      @include for-phone-only {
+        width: 70%;
+      }
+    }
+    .price {
+      width: 22%;
+      text-align: right;
+      @include for-phone-only {
+        width: 30%;
+        white-space: nowrap;
+      }
+    }
+  }
+}
+
+// Map
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+// Hamburger
+.menu-btn {
+  display: none;
+  width: 30px;
+  height: 30px;
+  background-color: $white;
+  border-radius: 50%;
+  outline: none;
+  position: absolute;
+  right: 20px;
+  top: 25px;
+  z-index: 21;
+  @media (max-width: 899px) {
+    display: inline-block;
+  }
+  @include for-phone-only {
+    top: 15px;
+  }
+}
