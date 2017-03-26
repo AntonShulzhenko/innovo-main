@@ -4,6 +4,8 @@ var loader = (function() {
   var progressBar = document.querySelector('.pace-progress');
   var progressValue;
 
+  if (!ldr) return;
+
   var intervalID = setInterval(function() {
     progressValue = progressBar.dataset.progressText;
     loaderProgress.style.width = progressValue;

@@ -17,6 +17,7 @@ const imagemin     = require('gulp-imagemin');
 const pug          = require('gulp-pug');
 const swig         = require('gulp-swig');
 const data         = require('gulp-data');
+const fs           = require('fs');
 
 // const min          = require('gulp-clean-css');
 // const uglify       = require('gulp-uglify');
@@ -54,13 +55,14 @@ gulp.task('server', () => {
 
 
 gulp.task('pug', () => {
-  gulp.src('./src/templates/*.pug')
-    .pipe(data((file) => require('./src/json/data.json')))
+  return gulp.src('./src/templates/pages/*.pug')
+    .pipe(data((file) => JSON.parse(fs.readFileSync('./src/json/data.json'))))
     .pipe(pug({
       pretty: true,
       cache: false
     }))
-    .pipe(gulp.dest('./public/'));
+    .pipe(gulp.dest('./public/'))
+    .pipe(server.stream());
 });
 
 
@@ -122,14 +124,6 @@ gulp.task('lint', () => {
 });
 
 
-gulp.task('static:html', () => {
-  return gulp
-    .src('src/index.html')
-    .pipe(errorHandler())
-    .pipe(gulp.dest('public'));
-});
-
-
 gulp.task('static:fonts', () => {
   return gulp
     .src([
@@ -151,18 +145,10 @@ gulp.task('static:images', function() {
 });
 
 
-gulp.task('static:json', () => {
-  return gulp
-    .src('src/js/*.json')
-    .pipe(errorHandler())
-    .pipe(gulp.dest('public/js'));
-});
-
-
-gulp.task('static', ['static:html', 'static:fonts', 'static:images', 'static:json'], () => {
+gulp.task('static', ['static:fonts', 'static:images'], () => {
   return gulp
     .src([
-      'src/*.png', 'src/*.svg', 'src/*.json', 'src/*.xml'
+      'src/*.png', 'src/*.svg', 'src/*.xml'
     ])
     .pipe(errorHandler())
     .pipe(gulp.dest('public'));
@@ -193,7 +179,7 @@ gulp.task('watch', () => {
   gulp.watch('src/scss/**/*.scss', ['styles']);
   gulp.watch(['src/js/**/*.js', '!src/js/vendor.js'], ['scripts:main', 'lint']);
   gulp.watch('!src/js/vendor.js', ['scripts:vendor']);
-  gulp.watch('src/index.html', ['static:html']);
+  gulp.watch('src/json/data.json', ['pug']);
   gulp.watch('src/templates/**/*.pug', ['pug']);
 });
 

@@ -8,6 +8,7 @@
     "autoprefixer": "^6.6.1",
     "browser-sync": "^2.18.5",
     "del": "^2.2.2",
+    "fs": "^0.0.1-security",
     "gulp": "^3.9.1",
     "gulp-cached": "^1.1.1",
     "gulp-clean-css": "^2.3.2",
