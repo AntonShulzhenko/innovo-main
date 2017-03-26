@@ -5,10 +5,30 @@ html
   body
     #top
 
-    //- #loader.loader
-    //-   .loader__inner
+    #loader.loader
+      .loader__inner
+    
+    //- Mobile overlay, close and open buttons
+    include partials/mobile
+
+    header.header
+      a.header__logo(href="#")
+        img.img-responsive(src="img/logo.svg" alt="Innovo")
+
+      ul.contacts.header__contacts
+        li.contacts__item.contacts__item_address
+          span.contacts__pic
+            i.ion-ios-location-outline
+              
+          span.contacts__text Киев, ул.Десятинная 13
+          
+        li.contacts__item.contacts__item_phone
+          span.contacts__pic
+            i.ion-ios-telephone-outline
+              
+          span.contacts__text 044 220 45 45
     
     block content
-      h1 Hello World!
+      h1 Hello Innovo!
       
     include partials/footer

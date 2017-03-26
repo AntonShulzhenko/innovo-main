@@ -1,0 +1,15 @@
+.price-table
+  each item in price
+    .price-table__row
+      .price-table__left
+        h2.price-table__heading #{item.category}
+
+      .price-table__right
+        each service in item.services
+          .price-table__service
+            p.name #{service.name}
+            
+            p.price
+              small #{service.from} 
+              span #{service.price} 
+              small грн

@@ -13,8 +13,6 @@
   var timingFunction    = 'Power1.easeInOut';
   var winWidth          = window.innerWidth;
 
-  if (!mobileContainer.length || !headerContacts.length) return;
-
   function setMobileAddress() {
     var text = location.querySelector('.contacts__text').innerHTML;
     var href = 'http://maps.google.com?q=' + text;

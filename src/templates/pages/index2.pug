@@ -4,4 +4,99 @@ block title
   - title = index.title
 
 block content
-  h1 Hello #{index.name}!
+  main.main#main
+    section.top
+      img.top__img-mob.img-responsive(src="img/i-mob.jpg" alt="")
+      
+      .top__about.decor.box
+        h1.top__h1 Стоматологическая клиника innovo
+        p.top__lead Современные технологии и опыт - залог здоровья наших пациентов
+
+      nav.nav
+        ul.nav__list
+          li.nav__item
+            a.nav__link.scroll-to(href="#about") О нас
+          li.nav__item
+            a.nav__link.scroll-to(href="#services") Услуги
+          li.nav__item
+            a.nav__link.scroll-to(href="#lab") INNOVO lab
+          li.nav__item
+            a.nav__link.scroll-to(href="#contacts") Контакты
+
+    section.about.decor#about
+      h2.about__h2 О клинике innovo
+
+      .about__container
+        .about__item
+          p.about__p
+            span.u-text-bold Innovo dental clinic
+            | - частная стоматологическая клиника, которая объединила в себе квалифицированную команду специалистов, современные цифровые технологии и индивидуальный подход к каждому пациенту.
+
+          p.about__p
+            span.u-text-bold Основное направление
+            | - комплексная реабилитация пациентов, эстетическое безметалловое протезирование и дентальная имплантация.
+
+          p.about__p
+            span.u-text-bold Залог успеха 
+            | - тщательно спланированная работа, командный подход, высокая технологичность, качество и безопасность.
+
+          p.about__p
+            span.u-text-bold Результат 
+            | - наши работы всегда превосходят ожидания наших клиентов.
+
+        .about__item.about__item_carousel
+          .owl-carousel
+            div
+              img.img-responsive(src="img/c2.jpg" alt="")
+            div
+              img.img-responsive(src="img/c5.jpg" alt="")
+            div
+              img.img-responsive(src="img/c3.jpg" alt="")
+
+        .about__item.about__item_benefits
+          .benefits
+            .benefits__item
+              h3.benefits__h3 Технологии
+              p.benefits__p
+                | Digital Smile design
+                br
+                | Sirona Cerec Connect
+            
+            .benefits__item
+              h3.benefits__h3 Точность
+              p.benefits__p Использование операционного микроскопа Carl Zeiss
+            
+            .benefits__item
+              h3.benefits__h3 Безопасность
+              p.benefits__p Установка имплантатов по точно смоделированному цифровому шаблону.
+
+    section.lab.decor#lab
+      .lab__left
+        h2.lab__heading Innovo Digital lab
+
+        p.lab__p Абсолютно уникальная зуботехническая лаборатория, которая не имеет аналогов в Украине. В 2015г получила сертификацию немецкой компании Sirona. Работает исключительно в цифровом протоколе.
+        
+        p.lab__p Благодаря инновационной системе Inlab от Sirona на базе который работает лаборатория, возможности стали практически безграничными.
+
+      .lab__right
+        figure.lab__figure
+          img.img-responsive(src="img/l1.jpg" alt="")
+
+    section.services.decor#services
+      .services__header
+        h2.services__heading.box Услуги
+        .services__banner
+
+      .services__content
+        include ../partials/price-table.pug
+
+    section.contact-section.decor#contacts
+      h2.contact-section__heading Контакты
+      a.contact-section__link.contact-section__link_tel(href="tel:044 220 45 45") 044 220 45 45
+      a.contact-section__link.contact-section__link_email(href="mailto:info@innovoclinic.com") info@innovoclinic.com
+      
+      //- Map
+      #map
+
+    div.mob-address
+      a(href="#")
