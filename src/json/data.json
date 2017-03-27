@@ -1,4 +1,22 @@
 {
+  "nav": [
+    {
+      "name": "О клинике",
+      "href": "/about.html"
+    },
+    {
+      "name": "Услуги",
+      "href": "/services.html"
+    },
+    {
+      "name": "Команда",
+      "href": "/team.html"
+    },
+    {
+      "name": "Блог",
+      "href": "/blog.html"
+    }
+  ],
   "price": [
     {
       "category": "Реставрация зубов",

@@ -20,7 +20,7 @@
   }
   &__text {
     font-family: $main-font;
-    font-size: 30px;
+    font-size: 24px;
     line-height: 1;
     color: $white;
     letter-spacing: 3px;
@@ -94,13 +94,12 @@
 // Box
 .box {
   box-shadow: 0 2px 32px rgba($black, 0.14);
-  border-bottom: 9px solid $accent;
+  border-bottom: 2px solid $bg-color;
   background: {
     color: $white;
-    image: url(../img/top-about-bg.png);
+    image: url(../img/lines-bg.png);
     repeat: no-repeat;
     position: center;
-    size: cover;
   }
 }
 
@@ -258,12 +257,12 @@
   outline: none;
   position: absolute;
   right: 20px;
-  top: 25px;
+  top: 10px;
   z-index: 21;
+  &.is-active {
+    z-index: 40;
+  }
   @media (max-width: 899px) {
     display: inline-block;
-  }
-  @include for-phone-only {
-    top: 15px;
   }
 }

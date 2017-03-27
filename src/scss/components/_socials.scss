@@ -1,0 +1,30 @@
+.socials {
+  a {
+    display: block;
+    font-family: $main-font;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 16px;
+    color: $black;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 20px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &:hover,
+    &:focus,
+    &:visited {
+      color: $black;
+    }
+    i {
+      font-size: 16px;
+      line-height: 1;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+}

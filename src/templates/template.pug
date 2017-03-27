@@ -10,6 +10,20 @@ html
     
     //- Mobile overlay, close and open buttons
     include partials/mobile
+    
+    nav.nav
+      ul.nav__list
+        each item in nav
+          li
+            a(href="#{item.href}") #{item.name}
+            
+      .socials
+        a(href="#")
+          i.ion-social-instagram-outline
+          | Instagram
+        a(href="#")
+          i.ion-social-facebook
+          | Facebook
 
     header.header
       a.header__logo(href="#")

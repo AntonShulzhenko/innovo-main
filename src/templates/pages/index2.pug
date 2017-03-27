@@ -9,19 +9,22 @@ block content
       img.top__img-mob.img-responsive(src="img/i-mob.jpg" alt="")
       
       .top__about.decor.box
-        h1.top__h1 Стоматологическая клиника innovo
-        p.top__lead Современные технологии и опыт - залог здоровья наших пациентов
+        h1.top__h1 Стоматологическая клиника Innovo
+        p.top__lead 
+          | Лучшие специалисты
+          br 
+          | и опыт - залог здоровья наших клиентов
 
-      nav.nav
-        ul.nav__list
-          li.nav__item
-            a.nav__link.scroll-to(href="#about") О нас
-          li.nav__item
-            a.nav__link.scroll-to(href="#services") Услуги
-          li.nav__item
-            a.nav__link.scroll-to(href="#lab") INNOVO lab
-          li.nav__item
-            a.nav__link.scroll-to(href="#contacts") Контакты
+      //- nav.nav
+      //-   ul.nav__list
+      //-     li.nav__item
+      //-       a.nav__link.scroll-to(href="#about") О нас
+      //-     li.nav__item
+      //-       a.nav__link.scroll-to(href="#services") Услуги
+      //-     li.nav__item
+      //-       a.nav__link.scroll-to(href="#lab") INNOVO lab
+      //-     li.nav__item
+      //-       a.nav__link.scroll-to(href="#contacts") Контакты
 
     section.about.decor#about
       h2.about__h2 О клинике innovo
@@ -90,13 +93,4 @@ block content
       .services__content
         include ../partials/price-table.pug
 
-    section.contact-section.decor#contacts
-      h2.contact-section__heading Контакты
-      a.contact-section__link.contact-section__link_tel(href="tel:044 220 45 45") 044 220 45 45
-      a.contact-section__link.contact-section__link_email(href="mailto:info@innovoclinic.com") info@innovoclinic.com
-      
-      //- Map
-      #map
-
-    div.mob-address
-      a(href="#")
+    include ../partials/contacts.pug

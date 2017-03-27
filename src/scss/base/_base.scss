@@ -12,10 +12,9 @@ body {
   margin-right: auto;
   background: {
     color: $bg-color;
-    image: url(../img/main-bg.png);
-    repeat: no-repeat;
+    image: url(../img/lines-bg.png);
+    repeat: repeat-y;
     position: center;
-    size: cover;
   }
   font-family: $content-font;
   font-size: $base-font-size;

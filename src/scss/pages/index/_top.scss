@@ -2,8 +2,7 @@
   width: 100%;
   height: 924px;
   position: relative;
-  border-bottom: 9px solid $top-border;
-  box-shadow: 0 2px 32px rgba($black, 0.14);
+  border-bottom: 2px solid $bg-color;
   background: {
     image: url(../img/top-bg-2.jpg);
     repeat: no-repeat;
@@ -19,12 +18,11 @@
     min-height: 700px;
   }
   @media (max-width: 1024px) {
-    min-height: 600px;
+    min-height: 760px;
+    background-position: right -180px center;
   }
   @include for-tablet-portait-only {
-    min-height: auto;
-    padding-top: 70px;
-    padding-bottom: 100px;
+    background-position: right 22% center;
   }
   @include for-phone-only {
     min-height: auto;
@@ -34,21 +32,22 @@
     background: none;
   }
   &__about {
-    max-width: 540px;
-    padding: 80px 135px 70px 125px;
+    max-width: 400px;
+    padding: 65px 75px;
+    border-bottom: 9px solid $accent;
     position: absolute;
-    top: 120px;
-    left: -60px;
+    top: 70px;
+    left: 55px;
     z-index: 2;
     &.decor {
       &::before {
         width: 1px;
-        height: 70px;
+        height: 40px;
         top: 0;
-        left: 180px;
+        left: 110px;
         @media (max-width: 1440px) {
-          height: 60px;
-          left: 110px;
+          height: 30px;
+          left: 60px;
         }
         @media (max-width: 899px) {
           height: 30px;
@@ -60,11 +59,11 @@
         }
       }
       &::after {
-        left: 175px;
-        top: 70px;
+        left: 105px;
+        top: 40px;
         @media (max-width: 1440px) {
-          top: 60px;
-          left: 105px;
+          top: 30px;
+          left: 55px;
         }
         @media (max-width: 899px) {
           top: 30px;
@@ -77,28 +76,22 @@
       }
     }
     @media (max-width: 1440px) {
-      max-width: 400px;
-      padding: 80px 60px 60px;
-      top: 80px;
+      padding: 50px 40px;
+      max-width: 280px;
     }
     @media (max-width: 1024px) {
-      max-width: 320px;
-      padding: 80px 40px 40px;
-    }
-    @media (max-width: 899px) {
-      position: relative;
+      bottom: 0;
+      top: auto;
+      max-width: 100%;
       left: 0;
-      top: 0;
-    }
-    @include for-tablet-portait-only {
-      margin-left: 20px;
-      padding-top: 40px;
+      width: 100%;
+      border-bottom: none;
+      box-shadow: none;
     }
     @include for-phone-only {
-      margin-left: 0;
-      padding: 40px 50px;
-      width: 100%;
-      max-width: 100%;
+      padding: 60px 90px 60px 30px;
+      position: relative;
+      border-bottom: 2px solid $bg-color;
     }
   }
   &__h1 {
@@ -109,31 +102,24 @@
     color: $black;
     margin: 0 auto 20px;
     text-transform: uppercase;
+    letter-spacing: 2px;
     @media (max-width: 1440px) {
       line-height: 36px;
+      font-size: 20px;
     }
     @media (max-width: 1024px) {
-      font-size: 22px;
       line-height: 30px;
-    }
-    @include for-phone-only {
-      font-size: 20px;
-      letter-spacing: 2px;
     }
   }
   &__lead {
     font-family: $main-font;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 100;
-    line-height: 58px;
+    line-height: 48px;
     color: $black;
     margin-bottom: 0;
     text-transform: uppercase;
     @media (max-width: 1440px) {
-      font-size: 30px;
-      line-height: 48px;
-    }
-    @media (max-width: 1024px) {
       font-size: 24px;
       line-height: 36px;
     }
