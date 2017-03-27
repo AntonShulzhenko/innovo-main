@@ -34,6 +34,32 @@ block content
           .benefits__item
             h3.benefits__h3 Безопасность
             p.benefits__p Установка имплантатов по точно смоделированному цифровому шаблону.
+            
+    section.services.section.section_offset-l.section_offset-t
+      .container-fluid
+        h2.section__h2 Услуги клиники
+        
+        .row
+          .services__content
+            .services__left
+              ul.services__list
+                li
+                  a(href="#", target="_blank") Реставрация
+                    br 
+                    | зубов
+                li
+                  a(href="#", target="_blank") Имплантация
+                li
+                  a(href="#", target="_blank") Детский
+                    br 
+                    | прием
+                li
+                  a(href="#", target="_blank") Все услуги
+              
+            .services__right
+              figure.services__figure
+                img(src="img/s-1.jpg", alt="")
+            //- include ../partials/price-table.pug
 
     section.section.section_offset-l.section_offset-tb.about.decor.box
       .container-fluid
@@ -81,13 +107,5 @@ block content
               | которая не имеет аналогов в Украине. В 2015г получила сертификацию немецкой компании Sirona. Работает исключительно в цифровом протоколе.
             
             p Благодаря инновационной системе Inlab от Sirona на базе который работает лаборатория, возможности стали практически безграничными.
-
-    section.services.decor#services
-      .services__header
-        h2.services__heading.box Услуги
-        .services__banner
-
-      .services__content
-        include ../partials/price-table.pug
 
     include ../partials/contacts.pug
