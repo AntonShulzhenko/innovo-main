@@ -34,6 +34,7 @@
   &__about {
     max-width: 400px;
     padding: 65px 75px;
+    box-shadow: 0 2px 32px rgba($black, 0.14);
     border-bottom: 9px solid $accent;
     position: absolute;
     top: 70px;
@@ -80,6 +81,7 @@
       max-width: 280px;
     }
     @media (max-width: 1024px) {
+      padding: 50px 60px;
       bottom: 0;
       top: auto;
       max-width: 100%;

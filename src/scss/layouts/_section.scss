@@ -1,7 +1,75 @@
 .section {
   background-color: $white;
   overflow: hidden;
-  &_offset-left {
+  @include for-phone-only {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  &_offset-l {
     padding-left: 145px;
+    @media (max-width: 1440px) {
+      padding-left: 80px;
+    }
+    @media (max-width: 1024px) {
+      padding-left: 45px;
+    }
+    @include for-phone-only {
+      padding-left: 15px;
+    }
+  }
+  &_offset-r {
+    padding-right: 145px;
+    @media (max-width: 1440px) {
+      padding-right: 80px;
+    }
+    @media (max-width: 1024px) {
+      padding-right: 45px;
+    }
+    @include for-phone-only {
+      padding-right: 15px;
+    }
+  }
+  &_offset-t {
+    padding-top: 140px;
+    @media (max-width: 1440px) {
+      padding-top: 80px;
+    }
+    @media (max-width: 1024px) {
+      padding-top: 60px;
+    }
+  }
+  &_offset-b {
+    padding-bottom: 140px;
+    @media (max-width: 1440px) {
+      padding-bottom: 80px;
+    }
+    @media (max-width: 1024px) {
+      padding-bottom: 60px;
+    }
+  }
+  &_offset-tb {
+    padding-top: 140px;
+    padding-bottom: 140px;
+    @media (max-width: 1440px) {
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+    @media (max-width: 1024px) {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+  }
+
+  &__h2 {
+    margin-bottom: 100px;
+    @media (max-width: 1440px) {
+      margin-bottom: 60px;
+    }
+    @media (max-width: 1024px) {
+      margin-bottom: 40px;
+    }
+    @include for-phone-only {
+      margin-bottom: 30px;
+    }
   }
 }

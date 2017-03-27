@@ -15,9 +15,9 @@ block content
           br 
           | и опыт - залог здоровья наших клиентов
           
-    section.section.section_offset-left.box
+    section.section.section_offset-l.section_offset-tb.box
       .container-fluid
-        h2 Наши ценности
+        h2.section__h2 Наши ценности
       
         .benefits
           .benefits__item
@@ -35,64 +35,52 @@ block content
             h3.benefits__h3 Безопасность
             p.benefits__p Установка имплантатов по точно смоделированному цифровому шаблону.
 
-    section.about.decor#about
-      h2.about__h2 О клинике innovo
+    section.section.section_offset-l.section_offset-tb.about.decor.box
+      .container-fluid
+        h2.section__h2 О клинике innovo
 
-      .about__container
-        .about__item
-          p.about__p
-            span.u-text-bold Innovo dental clinic
-            | - частная стоматологическая клиника, которая объединила в себе квалифицированную команду специалистов, современные цифровые технологии и индивидуальный подход к каждому пациенту.
+        .row
+          .col-lg-4
+            p
+              span.text-bold Innovo dental clinic
+              | - частная стоматологическая клиника, которая объединила в себе квалифицированную команду специалистов, современные цифровые технологии и индивидуальный подход к каждому пациенту.
 
-          p.about__p
-            span.u-text-bold Основное направление
-            | - комплексная реабилитация пациентов, эстетическое безметалловое протезирование и дентальная имплантация.
+            p
+              span.text-bold Основное направление
+              | - комплексная реабилитация пациентов, эстетическое безметалловое протезирование и дентальная имплантация.
 
-          p.about__p
-            span.u-text-bold Залог успеха 
-            | - тщательно спланированная работа, командный подход, высокая технологичность, качество и безопасность.
+            p
+              span.text-bold Залог успеха 
+              | - тщательно спланированная работа, командный подход, высокая технологичность, качество и безопасность.
 
-          p.about__p
-            span.u-text-bold Результат 
-            | - наши работы всегда превосходят ожидания наших клиентов.
+            p
+              span.text-bold Результат 
+              | - наши работы всегда превосходят ожидания наших клиентов.
 
-        .about__item.about__item_carousel
-          .owl-carousel
-            div
-              img.img-responsive(src="img/c2.jpg" alt="")
-            div
-              img.img-responsive(src="img/c5.jpg" alt="")
-            div
-              img.img-responsive(src="img/c3.jpg" alt="")
+          .col-lg-6.col-lg-offset-1
+            .owl-carousel
+              div
+                img.img-responsive(src="img/c2.jpg" alt="")
+              div
+                img.img-responsive(src="img/c5.jpg" alt="")
+              div
+                img.img-responsive(src="img/c3.jpg" alt="")
 
-        .about__item.about__item_benefits
-          .benefits
-            .benefits__item
-              h3.benefits__h3 Технологии
-              p.benefits__p
-                | Digital Smile design
-                br
-                | Sirona Cerec Connect
+    section.section.section_offset-r.section_offset-t.lab
+      .container-fluid
+        h2.section__h2.section_offset-l Innovo Digital lab
+      
+        .row.flex
+          .lab__left
+            figure
+              img.img-responsive(src="img/l1.jpg" alt="")
+
+          .lab__right
+            p
+              span.text-bold Абсолютно уникальная зуботехническая лаборатория, 
+              | которая не имеет аналогов в Украине. В 2015г получила сертификацию немецкой компании Sirona. Работает исключительно в цифровом протоколе.
             
-            .benefits__item
-              h3.benefits__h3 Точность
-              p.benefits__p Использование операционного микроскопа Carl Zeiss
-            
-            .benefits__item
-              h3.benefits__h3 Безопасность
-              p.benefits__p Установка имплантатов по точно смоделированному цифровому шаблону.
-
-    section.lab.decor#lab
-      .lab__left
-        h2.lab__heading Innovo Digital lab
-
-        p.lab__p Абсолютно уникальная зуботехническая лаборатория, которая не имеет аналогов в Украине. В 2015г получила сертификацию немецкой компании Sirona. Работает исключительно в цифровом протоколе.
-        
-        p.lab__p Благодаря инновационной системе Inlab от Sirona на базе который работает лаборатория, возможности стали практически безграничными.
-
-      .lab__right
-        figure.lab__figure
-          img.img-responsive(src="img/l1.jpg" alt="")
+            p Благодаря инновационной системе Inlab от Sirona на базе который работает лаборатория, возможности стали практически безграничными.
 
     section.services.decor#services
       .services__header
