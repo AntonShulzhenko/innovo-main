@@ -10,7 +10,8 @@
     transform: translateX(0);
     z-index: 30;
     opacity: 1;
-    .nav__list {
+    .nav__list,
+    .socials {
       opacity: 1;
     }
   }
@@ -28,6 +29,10 @@
     overflow: hidden;
     opacity: 0;
     transform: translateX(-100%);
+  }
+  @media (max-width: 420px) {
+    flex-wrap: wrap;
+    justify-content: flex-start;
   }
   &__list {
     list-style: none;
@@ -66,9 +71,15 @@
       }
     }
     @media (max-width: 899px) {
-      flex-wrap: wrap;
       width: 100%;
-      padding: 0 15px;
+      transition: opacity $duration $timing-function;
+      transition-delay: 250ms;
+      opacity: 0;
+      margin-bottom: 0;
+    }
+  }
+  .socials {
+    @media (max-width: 899px) {
       transition: opacity $duration $timing-function;
       transition-delay: 250ms;
       opacity: 0;

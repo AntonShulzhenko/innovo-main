@@ -1,3 +1,5 @@
+include mixins/section.pug
+
 doctype
 html
   include partials/head
@@ -11,36 +13,11 @@ html
     //- Mobile overlay, close and open buttons
     include partials/mobile
     
-    nav.nav
-      ul.nav__list
-        each item in nav
-          li
-            a(href="#{item.href}") #{item.name}
-            
-      .socials
-        a(href="#")
-          i.ion-social-instagram-outline
-          | Instagram
-        a(href="#")
-          i.ion-social-facebook
-          | Facebook
-
-    header.header
-      a.header__logo(href="#")
-        img.img-responsive(src="img/logo.svg" alt="Innovo")
-
-      ul.contacts.header__contacts
-        li.contacts__item.contacts__item_address
-          span.contacts__pic
-            i.ion-ios-location-outline
-              
-          span.contacts__text Киев, ул.Десятинная 13
-          
-        li.contacts__item.contacts__item_phone
-          span.contacts__pic
-            i.ion-ios-telephone-outline
-              
-          span.contacts__text 044 220 45 45
+    //- Navigation + socials
+    include partials/nav
+    
+    //- Header
+    include partials/header
     
     block content
       h1 Hello Innovo!

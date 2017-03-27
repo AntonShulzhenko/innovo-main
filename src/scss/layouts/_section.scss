@@ -1,0 +1,7 @@
+.section {
+  background-color: $white;
+  overflow: hidden;
+  &_offset-left {
+    padding-left: 145px;
+  }
+}
