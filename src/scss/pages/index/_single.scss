@@ -1,0 +1,50 @@
+.single {
+  margin-top: 170px;
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+  @media (max-width: 1200px) {
+    padding-left: 60px;
+    margin-top: 80px;
+  }
+  @media (max-width: 1024px) {
+    padding-left: 45px;
+  }
+  @include for-phone-only {
+    padding-left: 0;
+  }
+  figure {
+    margin-left: -30px;
+    margin-right: -30px;
+  }
+  &__container {
+    justify-content: space-between;
+  }
+  &__left {
+    max-width: 380px;
+    @media (max-width: 1024px) {
+      max-width: 100%;
+    }
+  }
+  &__right {
+    @media (max-width: 1200px) {
+      width: 50%;
+    }
+    @media (max-width: 1024px) {
+      width: 100%;
+      margin-top: 30px;
+      figure {
+        max-width: 550px;
+      }
+    }
+  }
+  &__name {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 30px;
+    @media (max-width: 1024px) {
+      font-size: 24px;
+    }
+  }
+}
