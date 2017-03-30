@@ -157,5 +157,52 @@ block content
               | которая не имеет аналогов в Украине. В 2015г получила сертификацию немецкой компании Sirona. Работает исключительно в цифровом протоколе.
             
             p Благодаря инновационной системе Inlab от Sirona на базе который работает лаборатория, возможности стали практически безграничными.
+            
+    section.tools.section.section_offset-l.section_offset-t
+      .container-fluid
+        h2.section__h2 Мы используем только дучшее оборудование и лучшие технологии
+        
+        .row
+          .tools__container
+            each item in index.tools
+              .tools__item
+                .tools__img
+                  img(src=`/img/${item.img}`, alt="")
+                
+                h3.tools__heading !{item.h}
+                  
+                p.tools__p !{item.p}
+                
+    section.charity.section.section_offset-l.section_offset-t.section_offset-b
+      .container-fluid
+        .row
+          .col-lg-5
+            h2.section__h2 
+              | Часть денег
+              br
+              | потраченных на лечение
+              br
+              | отчисляется
+              br
+              | на благотворительность
+          
+          .col-lg-7
+            p.text-bold.charity__lead Мы поддреживаем программу «Створи свое майбутне»направленную на детей сирот для получения их профориентации после интерната
+            
+        .row
+          .charity__container
+            p.charity__label Совместно с благотворительным фондом «Единственная» проектом GoIT и StartupUkraine
+            
+            .charity__partners
+              .charity__item
+                p
+                  | «единственная»
+                  small благотворительный фонд
+                  
+              .charity__item
+                img(src="/img/go-it.png", alt="")
+                
+              .charity__item
+                img(src="/img/startup-ukraine.png", alt="")
 
     include ../partials/contacts.pug

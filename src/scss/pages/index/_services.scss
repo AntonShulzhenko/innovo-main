@@ -237,13 +237,11 @@
               right: 20px;
             }
           }
-          // &:hover,
-          // &:focus {
-          //   &::before {
-          //     color: $white;
-          //     transform: translateX(10px);
-          //   }
-          // }
+          &:hover,
+          &:focus {
+            background-color: darken($accent-dark, 10%);
+            box-shadow: inset 0px -10px 0px 0px darken($accent, 10%);
+          }
         }
       }
     }

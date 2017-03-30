@@ -38,7 +38,7 @@
     border-bottom: 9px solid $accent;
     position: absolute;
     top: 70px;
-    left: 55px;
+    left: 59px;
     z-index: 2;
     &.decor {
       &::before {
@@ -79,6 +79,7 @@
     @media (max-width: 1440px) {
       padding: 50px 40px;
       max-width: 280px;
+      left: 100px;
     }
     @media (max-width: 1024px) {
       padding: 50px 60px;
