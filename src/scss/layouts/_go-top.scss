@@ -1,7 +1,7 @@
 .go-top {
   position: fixed;
-  right: 32px;
-  bottom: 30px;
+  right: 2%;
+  bottom: 130px;
   background-color: $accent;
   box-shadow: 0 5px 10px rgba($black, 0.2);
   display: flex;
@@ -30,7 +30,8 @@
     color: $white;
   }
   @include for-phone-only {
-    right: 0;
+    right: 50%;
     bottom: 0;
+    margin-right: -25px;
   }
 }

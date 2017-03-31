@@ -82,6 +82,11 @@
       justify-content: center;
       align-items: center;
       transition: all $duration $timing-function;
+      &.disabled {
+        opacity: 0;
+        cursor: default;
+        pointer-events: none;
+      }
       @include for-phone-only {
         font-size: 36px;
         transition-duration: 100ms;
