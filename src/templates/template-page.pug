@@ -1,0 +1,45 @@
+include mixins/section.pug
+
+block breadcrumb
+  - var brc = "test"
+  
+block aside
+  - var img = "img"
+
+doctype
+html
+  include partials/head
+  
+  body.page
+    #top
+
+    #loader.loader
+      .loader__inner
+    
+    //- Mobile overlay, close and open buttons
+    include partials/mobile
+    
+    //- Navigation + socials
+    include partials/nav
+    
+    //- Header
+    include partials/header
+    
+    aside.aside
+      figure
+        img(src=`img/${img}`, alt="")
+        
+    main.main  
+      .content
+        .breadcrumbs
+          a(href="/") 
+            | Главная
+            
+          a(href="#") #{brc}
+      
+        block content
+          p test
+          
+        include partials/contacts.pug
+      
+        include partials/footer

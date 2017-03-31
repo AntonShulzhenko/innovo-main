@@ -1,0 +1,17 @@
+.aside {
+  width: 27%;
+  height: 100%;
+  position: fixed;
+  left: 9%;
+  top: 0;
+  background-color: $white;
+  z-index: 9;
+  overflow: hidden;
+  figure {
+    img {
+      display: block;
+      height: 100%;
+      width: auto;
+    }
+  }
+}
