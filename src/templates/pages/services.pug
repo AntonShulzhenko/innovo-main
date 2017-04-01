@@ -6,8 +6,11 @@ block title
 block breadcrumb
   - brc = services.brc
   
+block heading
+  - var h1 = services.h1
+  
 block aside
   - img = 'service.jpg'
 
 block content
-  p test2
+  include ../partials/price-table.pug

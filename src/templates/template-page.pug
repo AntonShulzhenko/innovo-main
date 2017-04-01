@@ -5,6 +5,9 @@ block breadcrumb
   
 block aside
   - var img = "img"
+  
+block heading
+  - var h1 = "h1"
 
 doctype
 html
@@ -31,14 +34,19 @@ html
         
     main.main  
       .content
-        .breadcrumbs
-          a(href="/") 
-            | Главная
+        .content__header
+          .breadcrumbs
+            a.breadcrumbs__item(href="/")
+              i.ion-ios-home-outline
+              | Главная
+              
+            a.breadcrumbs__item(href="#") #{brc}
             
-          a(href="#") #{brc}
-      
-        block content
-          p test
+          h1.content__h1 !{h1}
+          
+        .content__body
+          block content
+            p test
           
         include partials/contacts.pug
       

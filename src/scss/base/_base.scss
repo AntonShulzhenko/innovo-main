@@ -27,8 +27,15 @@ body {
     .header {
       position: fixed;
     }
+    .header {
+      overflow: visible;
+      height: 60px;
+    }
     .main {
       padding-left: 36%;
+    }
+    .contacts__text {
+      color: $black;
     }
   }
 }
