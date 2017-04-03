@@ -1,0 +1,129 @@
+// Price table
+.price-table {
+  border-bottom: 1px solid rgba($black, .1);
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    position: relative;
+    width: 100%;
+    @include for-phone-only {
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__left {
+    width: 27%;
+    padding: 50px;
+    border-top: 1px solid rgba($black, .1);
+    @media (min-width: 600px) and (max-width: 1199px) {
+      width: 30%;
+    }
+    @include for-phone-only {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+  &__right {
+    width: 73%;
+    padding: 95px 50px 50px;
+    border-top: 1px solid rgba($black, .1);
+    border-left: 1px solid rgba($black, .1);
+    @media (max-width: 1440px) {
+      padding-top: 40px;
+    }
+    @media (max-width: 1199px) {
+      padding-top: 20px;
+      border-width: 2px;
+    }
+    @include for-phone-only {
+      width: 100%;
+      margin-bottom: 0;
+    }
+  }
+  &__heading {
+    font-size: 26px;
+    font-weight: 100;
+    line-height: 48px;
+    margin: 0;
+    text-align: right;
+    @media (max-width: 1440px) {
+      font-size: 30px;
+      line-height: 50px;
+    }
+    @include for-tablet-landscape-only {
+      font-size: 24px;
+      line-height: 42px;
+    }
+    @include for-tablet-portait-only {
+      font-size: 20px;
+      line-height: 40px;
+      letter-spacing: 2px;
+    }
+    @include for-phone-only {
+      font-size: 28px;
+      line-height: 40px;
+      letter-spacing: 1px;
+      text-align: left;
+    }
+  }
+  &__service {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    margin-bottom: 10px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    p {
+      font-family: $main-font;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 48px;
+      text-transform: uppercase;
+      margin-bottom: 0;
+      letter-spacing: 2px;
+      @include for-tablet-portait-only {
+        font-size: 18px;
+        line-height: 26px;
+      }
+      @include for-phone-only {
+        font-size: 20px;
+        line-height: 30px;
+      }
+    }
+    small {
+      font-size: 18px;
+      text-transform: none;
+      @media (max-width: 1440px) {
+        font-size: 16px;
+      }
+      @include for-tablet-landscape-only {
+        font-size: 14px;
+      }
+      @include for-tablet-portait-only {
+        font-size: 12px;
+      }
+      @include for-phone-only {
+        font-size: 12px;
+      }
+    }
+    .name {
+      width: 78%;
+      @include for-phone-only {
+        width: 70%;
+      }
+    }
+    .price {
+      width: 22%;
+      text-align: right;
+      @include for-phone-only {
+        width: 30%;
+        white-space: nowrap;
+      }
+    }
+  }
+}

@@ -9,6 +9,7 @@
 @import "components/socials";
 @import "components/benefits";
 @import "components/breadcrumbs";
+@import "components/price-table";
 
 @import "layouts/wrap";
 @import "layouts/header";
@@ -31,3 +32,5 @@
 @import "pages/index/single";
 @import "pages/index/tools";
 @import "pages/index/charity";
+
+@import "pages/services/services-about";
