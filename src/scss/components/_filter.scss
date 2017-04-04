@@ -1,0 +1,31 @@
+.filter {
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 64px;
+  padding-left: 70px;
+  padding-right: 70px;
+  li {
+    margin-right: 55px;
+  }
+  a {
+    display: inline-block;
+    padding: 15px;
+    text-transform: uppercase;
+    font-family: $main-font;
+    font-size: 16px;
+    line-height: 1;
+    color: $black;
+    cursor: pointer;
+    letter-spacing: 2px;
+    transition: all 200ms ease-in-out;
+    &:hover,
+    &:focus {
+      color: $black;
+      text-decoration: none;
+      font-weight: 900;
+      background-color: $logo-bg;
+    }
+  }
+}

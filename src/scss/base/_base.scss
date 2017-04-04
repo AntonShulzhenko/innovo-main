@@ -23,6 +23,7 @@ body {
   line-height: $base-line-height;
   padding-right: 0 !important;
   &.page {
+    background-attachment: fixed;
     .nav,
     .header {
       position: fixed;

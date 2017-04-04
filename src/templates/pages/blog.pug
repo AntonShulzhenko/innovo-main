@@ -1,0 +1,42 @@
+extends ../template-page.pug
+
+block title
+  - title = blog.title
+
+block breadcrumb
+  - brc = blog.brc
+  
+block heading
+  - var h1 = blog.h1
+  
+block aside
+  - img = 'service.jpg'
+
+block content
+  ul.filter
+    li
+      a(href="#") # уход за зубами
+      
+    li
+      a(href="#") # методики лечения
+      
+    li
+      a(href="#") # новости клиники
+      
+  .blog
+    .blog-post
+      figure.blog-post__figure
+        img.img-responsive(src="img/bp-1.jpg", alt="")
+      
+      h2.blog-post__heading 
+        | Что такое зубной камень?
+        br
+        | Статья с фотографей
+        
+      a.blog-post__tag(href="#") # методики лечения
+      
+      p.blog-post__excerpt Зубной камень - минерализованный бактериальный мягкий налет на зубной поверхности, который возникает при не своевременном удалении посредством гигиенических процедур. Зависимо от места образования различают следующие виды данного заболевания: Наддесневые камни - заметны в процессе осмотра без применения специального оборудования. Поддесневые камни - располагаются в пародонтальных карманах ...
+        
+      .blog-post__meta
+        span.blog-post__data 12.01.2017
+        a.blog-post__more(href="#") ЧИТАТЬ ВСЮ ПУБЛИКАЦИЮ
