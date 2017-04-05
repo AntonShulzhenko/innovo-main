@@ -47,6 +47,42 @@
       letter-spacing: 2px;
       padding-right: 60px;
       border-right: 1px solid $black;
+      position: relative;
+      &::before {
+        content: "\f117";
+        display: inline-block;
+        font-family: $io;
+        font-weight: 300;
+        position: absolute;
+        left: 0;
+      }
+    }
+    &__more {
+      display: inline-block;
+      padding-left: 60px;
+      padding-right: 26px;
+      position: relative;
+      font-family: $main-font;
+      font-size: 16px;
+      font-weight: 900;
+      color: $black;
+      letter-spacing: 2px;
+      &:hover {
+        color: $black;
+        text-decoration: underline;
+        &::after {
+          transform: translateX(10px);
+        }
+      }
+      &::after {
+        content: "\f3d6";
+        display: inline-block;
+        font-family: $io;
+        font-weight: 300;
+        position: absolute;
+        right: 0;
+        transition: transform 400ms ease-in-out;
+      }
     }
   }
 }

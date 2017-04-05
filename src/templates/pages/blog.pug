@@ -40,3 +40,34 @@ block content
       .blog-post__meta
         span.blog-post__data 12.01.2017
         a.blog-post__more(href="#") ЧИТАТЬ ВСЮ ПУБЛИКАЦИЮ
+        
+  .pagination
+    a.pagination__control.prev.hidden(href="#") Предыдущая
+    
+    ul.pagination__list
+      li
+        a.is-active(href="#") 1
+      li
+        a(href="#") 2
+      li
+        a(href="#") 3
+        
+    a.pagination__control.next(href="#") Следующая
+        
+
+  .related
+    .related__head
+      h2.releated__heading Рекомендуемые публикации
+      
+    .related__body
+      .related__item
+        a.related__link(href="#") Всё о язвах во рту — причины, лечение, профилактика
+        a.blog-post__tag(href="#") # методики лечения
+        
+      .related__item
+        a.related__link(href="#") Растет зуб мудрости. Симптомы. Лечение.
+        a.blog-post__tag(href="#") # методики лечения
+        
+      .related__item
+        a.related__link(href="#") Новое технологичное оборудование в клинике
+        a.blog-post__tag(href="#") # методики лечения

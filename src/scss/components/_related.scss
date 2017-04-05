@@ -1,0 +1,44 @@
+.related {
+  border-top: 1px solid rgba(#57575a, 0.1);
+  &__head {
+    padding: 45px 40px;
+  }
+  &__body {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    border-top: 1px solid rgba(#57575a, 0.1);
+  }
+  &__item {
+    width: 33.3333%;
+    padding: 80px 50px;
+    &:not(:last-child) {
+      border-right: 1px solid rgba(#57575a, 0.1);
+    }
+  }
+  &__link {
+    font-family: $main-font;
+    font-size: 20px;
+    font-weight: 600;
+    color: $black;
+    line-height: 36px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: box-shadow 200ms ease-in-out;
+    &:hover,
+    &:focus,
+    &:visited {
+      color: $black;
+      text-decoration: none;
+    }
+    &:hover {
+      box-shadow: 0 1px 0 0 $black;
+    }
+  }
+
+  .blog-post__tag {
+    margin-top: 50px;
+    margin-bottom: 0;
+    display: block;
+  }
+}
