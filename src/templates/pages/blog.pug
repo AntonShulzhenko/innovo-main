@@ -42,7 +42,9 @@ block content
         a.blog-post__more(href="#") ЧИТАТЬ ВСЮ ПУБЛИКАЦИЮ
         
   .pagination
-    a.pagination__control.prev.hidden(href="#") Предыдущая
+    a.pagination__control.prev.hidden(href="#")
+      i.ion-ios-arrow-thin-left
+      | Предыдущая
     
     ul.pagination__list
       li
@@ -52,8 +54,9 @@ block content
       li
         a(href="#") 3
         
-    a.pagination__control.next(href="#") Следующая
-        
+    a.pagination__control.next(href="#")
+      | Следующая
+      i.ion-ios-arrow-thin-right
 
   .related
     .related__head

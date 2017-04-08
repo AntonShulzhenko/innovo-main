@@ -15,19 +15,39 @@
   text-transform: uppercase;
   &__control {
     color: $black;
-    transition: all 400ms ease-in-out;
     &:hover,
     &:focus,
     &:visited {
       color: $black;
-      box-shadow: 0 1px 0 0 $black;
       text-decoration: none;
+    }
+    i {
+      display: inline-block;
+      transition: transform 400ms ease-in-out;
     }
     &.prev {
       margin-right: 50px;
+      &:hover,
+      &:focus {
+        i {
+          transform: translateX(-10px);
+        }
+      }
+      i {
+        margin-right: 10px;
+      }
     }
     &.next {
       margin-left: 50px;
+      &:hover,
+      &:focus {
+        i {
+          transform: translateX(10px);
+        }
+      }
+      i {
+        margin-left: 10px;
+      }
     }
   }
   &__list {

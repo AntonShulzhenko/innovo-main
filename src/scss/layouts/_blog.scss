@@ -85,4 +85,108 @@
       }
     }
   }
+
+  // Blog content
+  &-content {
+    padding: 120px 15%;
+    border-top: 1px solid rgba(#57575a, 0.1);
+    &__promo {
+      margin-bottom: 120px;
+      p {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 56px;
+        margin-bottom: 30px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+    h2 {
+      font-size: 30px;
+      line-height: 56px;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 18px;
+      line-height: 42px;
+      margin-bottom: 50px;
+    }
+    table {
+      width: 100%;
+      margin-bottom: 100px;
+      clear: both;
+      th,
+      td {
+        border: 1px solid #e0e0e0;
+      }
+      th {
+        padding: 40px 25px 20px;
+        background-color: #eeeeee;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1;
+        vertical-align: top;
+        &:last-child {
+          text-align: right;
+        }
+      }
+      td {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 24px;
+        padding: 25px 20px;
+        vertical-align: middle;
+        &:nth-child(3) {
+          font-size: 14px;
+          font-weight: 400;
+        }
+        &:last-child {
+          font-size: 24px;
+          font-weight: 400;
+          text-align: right;
+        }
+      }
+    }
+    figure {
+      width: 100%;
+      margin-bottom: 90px;
+      figcaption {
+        font-size: 16px;
+        font-weight: 600;
+        text-align: right;
+        font-style: italic;
+        margin-top: 20px;
+      }
+    }
+    img {
+      display: block;
+      width: auto;
+      max-width: 100%;
+      height: auto;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 40px;
+      li {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 30px;
+        margin-bottom: 10px;
+        padding-left: 20px;
+        position: relative;
+        &::before {
+          content: "";
+          display: block;
+          width: 3px;
+          height: 6px;
+          background-color: #57575a;
+          position: absolute;
+          left: 0;
+          top: 12px;
+        }
+      }
+    }
+  }
 }
