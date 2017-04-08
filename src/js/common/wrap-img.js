@@ -56,19 +56,11 @@
 
             switch(el) {
               case floatRight:
-                if ($(window).width() < 600) {
-                  setFigureMargin(selfFigure, 'left', '0');
-                } else {
-                  setFigureMargin(selfFigure, 'left', '10%');
-                }
+                ($(window).width() < 600) ? setFigureMargin(selfFigure, 'left', '0') : setFigureMargin(selfFigure, 'left', '10%');
                 break;
 
               case floatLeft:
-                if ($(window).width() < 600) {
-                  setFigureMargin(selfFigure, 'right', '0');
-                } else {
-                  setFigureMargin(selfFigure, 'right', '10%');
-                }
+                ($(window).width() < 600) ? setFigureMargin(selfFigure, 'right', '0') : setFigureMargin(selfFigure, 'right', '10%');
                 break;
 
               default:

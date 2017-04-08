@@ -21,9 +21,11 @@ $duration: 400ms;
 $timing-function: ease-in-out;
 
 // Media
+$mw-1680: 'screen and (max-width: 1680px)';
 $mw-1440: 'screen and (max-width: 1440px)';
 $mw-1200: 'screen and (max-width: 1200px)';
 $mw-1024: 'screen and (max-width: 1024px)';
+$mw-900: 'screen and (max-width: 900px)';
 $mw-991: 'screen and (max-width: 991px)';
 $mw-899: 'screen and (max-width: 899px)';
 $mw-767: 'screen and (max-width: 767px)';

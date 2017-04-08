@@ -2,13 +2,16 @@
 .price-table {
   padding-top: 80px;
   border-bottom: 1px solid rgba($black, .1);
+  @media #{$mw-1200} {
+    padding-top: 0;
+  }
   &__row {
     display: flex;
     justify-content: space-between;
     align-items: stretch;
     position: relative;
     width: 100%;
-    @include for-phone-only {
+    @media #{$mw-900} {
       flex-wrap: wrap;
       align-items: flex-start;
     }
@@ -20,12 +23,21 @@
     width: 27%;
     padding: 50px;
     border-top: 1px solid rgba($black, .1);
-    @media (min-width: 600px) and (max-width: 1199px) {
+    @media #{$mw-1680} {
+      padding: 30px;
       width: 30%;
     }
-    @include for-phone-only {
+    @media #{$mw-1440} {
+      width: 35%;
+    }
+    @media #{$mw-1200} {
+      width: 40%;
+    }
+    @media #{$mw-900} {
       width: 100%;
-      margin-bottom: 20px;
+    }
+    @include for-phone-only {
+      padding: 20px 15px;
     }
   }
   &__right {
@@ -33,16 +45,23 @@
     padding: 95px 50px 50px;
     border-top: 1px solid rgba($black, .1);
     border-left: 1px solid rgba($black, .1);
-    @media (max-width: 1440px) {
-      padding-top: 40px;
+    @media #{$mw-1680} {
+      padding: 70px 30px 30px;
+      width: 70%;
     }
-    @media (max-width: 1199px) {
-      padding-top: 20px;
-      border-width: 2px;
+    @media #{$mw-1440} {
+      width: 65%;
+    }
+    @media #{$mw-1200} {
+      width: 60%;
+    }
+    @media #{$mw-900} {
+      width: 100%;
+      border-left: none;
+      padding-top: 30px;
     }
     @include for-phone-only {
-      width: 100%;
-      margin-bottom: 0;
+      padding: 40px 15px;
     }
   }
   &__heading {
@@ -51,21 +70,23 @@
     line-height: 48px;
     margin: 0;
     text-align: right;
-    @media (max-width: 1440px) {
-      font-size: 30px;
-      line-height: 50px;
-    }
-    @include for-tablet-landscape-only {
+    @media #{$mw-1440} {
       font-size: 24px;
       line-height: 42px;
     }
+    @include for-tablet-landscape-only {
+      font-size: 24px;
+      line-height: 36px;
+      letter-spacing: 1px;
+    }
     @include for-tablet-portait-only {
-      font-size: 20px;
-      line-height: 40px;
+      font-size: 26px;
+      line-height: 36px;
       letter-spacing: 2px;
+      text-align: left;
     }
     @include for-phone-only {
-      font-size: 28px;
+      font-size: 26px;
       line-height: 40px;
       letter-spacing: 1px;
       text-align: left;
@@ -76,6 +97,9 @@
     justify-content: space-between;
     align-items: stretch;
     margin-bottom: 10px;
+    @include for-phone-only {
+      margin-bottom: 40px;
+    }
     &:last-child {
       margin-bottom: 0;
     }
@@ -87,13 +111,25 @@
       text-transform: uppercase;
       margin-bottom: 0;
       letter-spacing: 2px;
+      @media #{$mw-1440} {
+        line-height: 36px;
+        letter-spacing: 1px;
+      }
+      @include for-tablet-landscape-only {
+        font-size: 18px;
+        line-height: 30px;
+        letter-spacing: 1px;
+        font-weight: 700;
+      }
       @include for-tablet-portait-only {
         font-size: 18px;
         line-height: 26px;
+        font-weight: 700;
       }
       @include for-phone-only {
-        font-size: 20px;
-        line-height: 30px;
+        font-size: 16px;
+        line-height: 26px;
+        font-weight: 700;
       }
     }
     small {
@@ -115,14 +151,14 @@
     .name {
       width: 78%;
       @include for-phone-only {
-        width: 70%;
+        width: 75%;
       }
     }
     .price {
       width: 22%;
       text-align: right;
       @include for-phone-only {
-        width: 30%;
+        width: 25%;
         white-space: nowrap;
       }
     }

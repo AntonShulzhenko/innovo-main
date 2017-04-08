@@ -146,8 +146,11 @@
   &-content {
     padding: 120px 16%;
     border-top: 1px solid rgba(#57575a, 0.1);
-    @media #{$mw-1440} {
+    @media #{$mw-1680} {
       padding: 70px 10%;
+    }
+    @media #{$mw-1440} {
+      padding: 70px 5%;
     }
     @media #{$mw-1200} {
       padding: 70px 40px;
@@ -181,31 +184,42 @@
         line-height: 30px;
       }
     }
+    .table {
+      margin-bottom: 100px;
+      overflow-x: auto;
+    }
     table {
       width: 100%;
-      margin-bottom: 100px;
+      min-width: 660px;
       clear: both;
       th,
       td {
         border: 1px solid #e0e0e0;
+        font-size: 18px;
+        font-weight: 700;
+        @include for-phone-only {
+          font-size: 16px;
+        }
       }
       th {
         padding: 40px 25px 20px;
         background-color: #eeeeee;
-        font-size: 18px;
-        font-weight: 700;
         line-height: 1;
         vertical-align: top;
+        @include for-phone-only {
+          padding: 40px 15px 15px;
+        }
         &:last-child {
           text-align: right;
         }
       }
       td {
-        font-size: 18px;
-        font-weight: 700;
         line-height: 24px;
         padding: 25px 20px;
         vertical-align: middle;
+        @include for-phone-only {
+          padding: 30px 15px;
+        }
         &:nth-child(3) {
           font-size: 14px;
           font-weight: 400;

@@ -1,10 +1,34 @@
 .services-about {
   padding: 200px 0 100px 75px;
   margin-right: -15px;
+  @media #{$mw-1680} {
+    padding: 100px 0 60px 30px;
+  }
+  @media #{$mw-1200} {
+    margin-right: 0;
+    padding: 80px 15px;
+  }
+  @include for-phone-only {
+    padding: 60px 0;
+  }
   &__heading {
     margin-bottom: 110px;
+    @media #{$mw-1680} {
+      margin-bottom: 60px;
+    }
+    @media #{$mw-1440} {
+      font-size: 30px;
+      margin-bottom: 40px;
+    }
+    @include for-phone-only {
+      font-size: 24px;
+      line-height: 36px
+    }
   }
   p {
     line-height: 36px;
+    @media #{$mw-1440} {
+      line-height: 30px;
+    }
   }
 }

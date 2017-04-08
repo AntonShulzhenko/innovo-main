@@ -14,8 +14,8 @@
   var winWidth          = window.innerWidth;
 
   function setMobileAddress() {
-    var text = location.querySelector('.contacts__text').innerHTML;
-    var href = 'http://maps.google.com?q=' + text;
+    var text  = location.querySelector('.contacts__text').innerHTML;
+    var href  = 'http://maps.google.com?q=' + text;
     var small = '<small>построить маршрут</small>';
     mobAddress.innerHTML = text + small;
     mobAddress.setAttribute('href', href);
@@ -87,6 +87,16 @@
   }
 
   init();
+
+  if (winWidth > 900) {
+    $(window).on('scroll', function() {
+      if($(window).scrollTop() > 50) {
+        $(headerContacts).fadeOut(400);
+      } else {
+        $(headerContacts).fadeIn(400);
+      }
+    });
+  }
 
   if(winWidth > 1025) return;
 
