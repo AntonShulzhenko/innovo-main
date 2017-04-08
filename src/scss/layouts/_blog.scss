@@ -186,7 +186,25 @@
     }
     .table {
       margin-bottom: 100px;
-      overflow-x: auto;
+      &__inner {
+        overflow-x: auto;
+      }
+      &-scroll {
+        width: 100%;
+        margin-top: 5px;
+        padding: 6px;
+        background-color: #eee;
+        display: flex;
+        justify-content: space-between;
+        &__btn {
+          width: 30px;
+          height: 100%;
+          font-size: 18px;
+          border: none;
+          box-shadow: none;
+          background: #eee;
+        }
+      }
     }
     table {
       width: 100%;
