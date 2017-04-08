@@ -31,9 +31,18 @@ body {
     .header {
       overflow: visible;
       height: 60px;
+      @media #{$mw-899} {
+        position: absolute;
+      }
     }
     .main {
       padding-left: 33%;
+      @media #{$mw-899} {
+        padding-left: 16px;
+      }
+      @include for-phone-only {
+        padding-left: 0;
+      }
     }
     .contacts__text {
       color: $black;

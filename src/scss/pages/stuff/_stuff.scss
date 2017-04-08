@@ -1,0 +1,131 @@
+.stuff {
+  &__descr {
+    padding: 100px 120px;
+    border-top: 1px solid rgba(#57575a, 0.1);
+    border-bottom: 1px solid rgba(#57575a, 0.1);
+    p {
+      font-family: $main-font;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 48px;
+      text-transform: uppercase;
+      margin-bottom: 0;
+      letter-spacing: 2px;
+    }
+    @media #{$mw-1440} {
+      padding: 60px 40px;
+      p {
+        font-size: 20px;
+        line-height: 36px;
+      }
+    }
+    @media #{$mw-1200} {
+      padding: 40px;
+    }
+    @media #{$mw-899} {
+      border-left: none;
+    }
+    @include for-phone-only {
+      padding: 30px 15px;
+      p {
+        font-size: 18px;
+        line-height: 30px;
+      }
+    }
+  }
+  &__inner {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: stretch;
+  }
+  &__item {
+    width: 33.3333%;
+    padding: 50px 5%;
+    border-left: 1px solid rgba(#57575a, 0.1);
+    border-bottom: 1px solid rgba(#57575a, 0.1);
+    &:nth-child(8) {
+      width: 66.6666%;
+      .stuff__figure {
+        max-width: 100%;
+      }
+    }
+    &.empty {
+      height: auto;
+      min-height: 415px;
+      @media #{$mw-899} {
+        display: none;
+      }
+    }
+    @media #{$mw-1440} {
+      padding: 30px 3%;
+    }
+    @media #{$mw-1200} {
+      width: 50%;
+      &:nth-child(8) {
+        width: 50%;
+      }
+    }
+    @media #{$mw-899} {
+      border-left: none;
+      &:nth-child(odd) {
+        border-right: 1px solid rgba(#57575a, 0.1);
+      }
+    }
+    @media #{$mw-420} {
+      width: 100%;
+      padding: 40px 15px;
+      &:nth-child(8) {
+        width: 100%;
+      }
+    }
+    p {
+      line-height: 36px;
+      &:first-child {
+        &:first-letter {
+          font-family: $main-font;
+          font-size: 60px;
+          font-weight: 700;
+          line-height: 64px;
+          float: left;
+          display: inline-block;
+          margin-right: 5px;
+        }
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+      @media #{$mw-1440} {
+        line-height: 30px;
+        font-size: 14px;
+        &:first-child {
+          &:first-letter {
+            line-height: 60px;
+          }
+        }
+      }
+    }
+    .stuff__name {
+      font-family: $main-font;
+      font-size: 24px;
+      font-weight: 300;
+      line-height: 36px;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+      letter-spacing: 2px;
+    }
+    .stuff__prof {
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1;
+      margin-bottom: 0;
+    }
+  }
+  &__figure {
+    width: 100%;
+    max-width: 275px;
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 40px;
+  }
+}

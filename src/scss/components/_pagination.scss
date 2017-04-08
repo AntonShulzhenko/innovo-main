@@ -13,8 +13,20 @@
   line-height: 1;
   color: $black;
   text-transform: uppercase;
+  @media #{$mw-1440} {
+    padding: 30px 10%;
+  }
+  @media #{$mw-1200} {
+    padding: 30px 40px;
+  }
+  @include for-phone-only {
+    padding: 30px 15px;
+  }
   &__control {
     color: $black;
+    @include for-phone-only {
+      font-size: 0;
+    }
     &:hover,
     &:focus,
     &:visited {
@@ -24,9 +36,18 @@
     i {
       display: inline-block;
       transition: transform 400ms ease-in-out;
+      @include for-phone-only {
+        font-size: 20px;
+      }
     }
     &.prev {
       margin-right: 50px;
+      @media #{$mw-1200} {
+        margin-right: 30px;
+      }
+      @include for-phone-only {
+        margin-right: 10px;
+      }
       &:hover,
       &:focus {
         i {
@@ -39,6 +60,12 @@
     }
     &.next {
       margin-left: 50px;
+      @media #{$mw-1200} {
+        margin-left: 30px;
+      }
+      @include for-phone-only {
+        margin-left: 10px;
+      }
       &:hover,
       &:focus {
         i {
@@ -61,6 +88,12 @@
       text-align: center;
       &:not(:last-child) {
         margin-right: 45px;
+        @media #{$mw-1200} {
+          margin-right: 30px;
+        }
+        @include for-phone-only {
+          margin-right: 10px;
+        }
       }
       a {
         display: block;

@@ -2,18 +2,35 @@
   border-top: 1px solid rgba(#57575a, 0.1);
   &__head {
     padding: 45px 40px;
+    @include for-phone-only {
+      padding: 30px 15px;
+    }
   }
   &__body {
     display: flex;
     justify-content: center;
     align-items: stretch;
     border-top: 1px solid rgba(#57575a, 0.1);
+    @include for-phone-only {
+      flex-wrap: wrap;
+    }
   }
   &__item {
     width: 33.3333%;
     padding: 80px 50px;
+    @media #{$mw-1440} {
+      padding: 50px 20px;
+    }
+    @include for-phone-only {
+      width: 100%;
+      padding: 40px 15px;
+    }
     &:not(:last-child) {
       border-right: 1px solid rgba(#57575a, 0.1);
+      @include for-phone-only {
+        border-right: none;
+        border-bottom: 1px solid rgba(#57575a, 0.1);
+      }
     }
   }
   &__link {
@@ -25,6 +42,9 @@
     text-transform: uppercase;
     letter-spacing: 2px;
     transition: box-shadow 200ms ease-in-out;
+    @media #{$mw-1440} {
+      letter-spacing: 1px;
+    }
     &:hover,
     &:focus,
     &:visited {
@@ -40,5 +60,8 @@
     margin-top: 50px;
     margin-bottom: 0;
     display: block;
+    @media #{$mw-1440} {
+      margin-top: 40px;
+    }
   }
 }

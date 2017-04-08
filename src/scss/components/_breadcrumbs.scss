@@ -6,6 +6,9 @@
     line-height: 1;
     color: #57575a;
     cursor: pointer;
+    @include for-phone-only {
+      font-size: 12px;
+    }
     &:hover,
     &:focus {
       color: #57575a;

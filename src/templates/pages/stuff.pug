@@ -1,0 +1,36 @@
+extends ../template-page.pug
+
+block title
+  - title = stuff.title
+
+block breadcrumb
+  - brc = stuff.brc
+  
+block heading
+  - var h1 = stuff.h1
+  
+block aside
+  - img = 'stuff.jpg'
+
+block content
+  .stuff
+    .stuff__descr
+      p Наш коллектив — высококлассные специалисты, объединяющие в себе значительный опыт и стремление всегда быть в курсе всех новых технологий в отрасли стоматологии
+      
+    .stuff__inner
+      each item in stuff.items
+        .stuff__item
+          if item.text
+            p #{item.text}
+          
+          else
+            figure.stuff__figure
+              img(src=`img/${item.img}`, alt="", class="img-responsive")
+                
+            p.stuff__name !{item.name}
+              
+            p.stuff__prof #{item.prof}
+        
+      .stuff__item.empty
+      .stuff__item.empty
+      .stuff__item.empty

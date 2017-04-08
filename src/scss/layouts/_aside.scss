@@ -14,4 +14,26 @@
       width: auto;
     }
   }
+  @media #{$mw-899} {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    left: 0;
+    position: relative;
+    figure {
+      img {
+        display: block;
+        height: auto;
+        width: 100%;
+      }
+    }
+  }
+  @include for-phone-only {
+    max-height: 170px;
+    figure {
+      img {
+        margin-top: -80px;
+      }
+    }
+  }
 }

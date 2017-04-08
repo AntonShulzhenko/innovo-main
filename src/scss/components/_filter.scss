@@ -6,8 +6,23 @@
   margin-bottom: 64px;
   padding-left: 70px;
   padding-right: 70px;
+  @media #{$mw-1440} {
+    margin-bottom: 40px;
+  }
+  @media #{$mw-1200} {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  @include for-phone-only {
+    padding-left: 15px;
+    padding-right: 15px;
+    flex-wrap: wrap;
+  }
   li {
     margin-right: 55px;
+    @media #{$mw-1440} {
+      margin-right: 20px;
+    }
   }
   a {
     display: inline-block;
@@ -20,6 +35,14 @@
     cursor: pointer;
     letter-spacing: 2px;
     transition: all 200ms ease-in-out;
+    @media #{$mw-1440} {
+      font-size: 14px;
+      padding: 10px 15px;
+    }
+    @media #{$mw-1024} {
+      font-size: 12px;
+      padding: 10px;
+    }
     &:hover,
     &:focus {
       color: $black;
