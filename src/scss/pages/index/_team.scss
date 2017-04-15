@@ -118,21 +118,11 @@
     }
   }
   &__btn {
-    display: inline-block;
     width: 100%;
     max-width: 360px;
     height: 105px;
     padding: 0 10px;
-    background-color: $accent-dark;
-    box-shadow: inset 0px -6px 0px 0px $accent;
-    font-family: $main-font;
-    font-size: 24px;
     line-height: 105px;
-    color: $white;
-    text-align: center;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: all $duration $timing-function;
     @media (max-width: 1680px) {
       height: 80px;
       line-height: 80px;
@@ -147,24 +137,6 @@
     }
     @media (max-width: 480px) {
       max-width: 100%;
-    }
-    &:hover,
-    &:focus {
-      color: $white;
-      text-decoration: none;
-      background-color: darken($accent-dark, 10%);
-      box-shadow: inset 0px -6px 0px 0px darken($accent, 10%);
-      i {
-        transform: translateX(10px);
-      }
-    }
-    &:visited {
-      color: $white;
-    }
-    i {
-      display: inline-block;
-      margin-left: 10px;
-      transition: all $duration $timing-function;
     }
   }
 }

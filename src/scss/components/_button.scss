@@ -1,0 +1,32 @@
+.button {
+  display: inline-block;
+  padding: 10px;
+  background-color: $accent-dark;
+  box-shadow: inset 0px -6px 0px 0px $accent;
+  font-family: $main-font;
+  font-size: 24px;
+  line-height: 1;
+  color: $white;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all $duration $timing-function;
+  &:hover,
+  &:focus {
+    color: $white;
+    text-decoration: none;
+    background-color: darken($accent-dark, 10%);
+    box-shadow: inset 0px -6px 0px 0px darken($accent, 10%);
+    i {
+      transform: translateX(10px);
+    }
+  }
+  &:visited {
+    color: $white;
+  }
+  i {
+    display: inline-block;
+    margin-left: 10px;
+    transition: all $duration $timing-function;
+  }
+}
